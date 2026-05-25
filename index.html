@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chat UI Application</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 flex justify-center items-center h-screen">
+
+  <!-- Chat Container -->
+  <div class="bg-white w-full max-w-md h-[600px] shadow-xl rounded-2xl flex flex-col overflow-hidden">
+
+    <!-- Header -->
+    <div class="bg-blue-600 text-white p-4 text-center text-xl font-bold">
+      Chat Application
+    </div>
+
+    <!-- Messages -->
+    <div id="chatBox" class="flex-1 p-4 overflow-y-auto space-y-3 bg-gray-50">
+    </div>
+
+    <!-- Typing -->
+    <div id="typing" class="px-4 py-1 text-sm text-gray-500 hidden">
+      Bot is typing...
+    </div>
+
+    <!-- Input -->
+    <div class="p-4 border-t flex gap-2">
+
+      <input
+        type="text"
+        id="messageInput"
+        placeholder="Type message..."
+        class="flex-1 border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
+
+      <button
+        id="sendBtn"
+        class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700"
+      >
+        Send
+      </button>
+
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
